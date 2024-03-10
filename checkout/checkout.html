@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="../style.css" />
+	<title>js</title>
+</head>
+
+<body onload="renderCheckout()">
+	<header>
+		<div class="container">
+			<nav>
+				<div class="logo">
+					<span class="title"> <a href="/index.html">js</a></span>
+					<!-- <span class="icon"><i class="material-icons">shopping_cart</i></span> -->
+				</div>
+				<div class="nav-link"></div>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<div class="flex-container">
+			<div class="checkout">
+				<table id="checkout-table">
+					<tr>
+						<thead>
+							<td class="t-Head">№</td>
+							<td class="t-Head">Название Товара</td>
+							<td class="t-Head">Цена</td>
+							<td class="t-Head">Количество</td>
+							<td class="t-Head">Всего товаров</td>
+						</thead>
+					</tr>
+					<tbody id="checkout-table-row" >
+
+					</tbody>
+				</table>
+					<div class="total-container">
+						<span class="t-Head">
+							Total: ₸
+							<span id="total"></span>
+						</span>
+					</div>
+				<textarea name="" id="" cols="30" rows="10" class="input-textarea" placeholder="Delivery Address"></textarea>
+			</div>
+		</div>
+		<div class="bottom-cta">
+			<span class="btn cta"><a href="/cart/cart.html">Назад в корзину</a></span>
+			<span class="btn cta" id="confirmPurchase"><a onclick="confirmPurchase()">Подтвердить покупку</a></span>
+		</div>
+	</main>
+	
+
+	<footer>
+		<div class="container">
+			<div class="footer-container">
+				<div class="foot-col-social">
+					<div class="social-text">
+						<p>Следите за нами:</p>
+					</div>
+					<ul class="social">
+						<li><a href="#" class="foot-icons facebook"></a></li>
+						<li><a href="" class="foot-icons twitter"></a></li>
+						<li><a href="" class="foot-icons instagram"></a></li>
+						<li><a href="" class="foot-icons tumblr"></a></li>
+					</ul>
+				</div>
+				<div class="foot-col-text">
+					<p>Звоните: +8 800-555-3535</p>
+				</div>
+				<div class="foot-col-newsletter">
+					<div class="newsletter-text">
+						<p>Для связи и предложений:</p>
+					</div>
+					<div class="newsletter-input">
+						<input type="email" class="foot-input" placeholder="example@abc.com" />
+					</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="footer-text">
+				<p>
+					Design & develop | 2024 |
+					<a href="">Privacy Policy</a> | <a href="">Return Policy</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	
+
+	
+	<script src="checkout.js"></script>
+	
+
+</body>
+
+</html>
