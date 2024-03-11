@@ -127,13 +127,16 @@ function addToCart(prodId) {
 		let currUserId = sessionStorage.getItem('currUserId');
 		let currentUserCartKey = 'cart_' + currUserId;
 		CART = JSON.parse(localStorage.getItem(currentUserCartKey || "[]"));
-		let isAlreadyInCart = CART.some(item => item.id === item.id);
-		if(isAlreadyInCart) {
-			CART.forEach(item => {
-				if(item.id === prodId) {
-					item.count++;
-				}
-			})
+		// let isAlreadyInCart = CART.some(item => item.id === item.id);
+		// if(isAlreadyInCart) {
+		// 	CART.forEach(item => {
+		// 		if(item.id === prodId) {
+		// 			item.count++;
+		// 		}
+		// 	})
+		let existingItem = CART.find(item => item.id === prodId);
+		if (existingItem) {
+			existingItem.count++;
 		} else {
 			CART.push({"id":prodId,"count":1});
 		}
